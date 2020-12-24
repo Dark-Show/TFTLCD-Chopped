@@ -3,8 +3,8 @@
 // Graphics library by ladyada/adafruit with init code from Rossum
 // MIT license
 
-#ifndef _ADAFRUIT_TFTLCD_H_
-#define _ADAFRUIT_TFTLCD_H_
+#ifndef _TFTLCD_ILI9341_H_
+#define _TFTLCD_ILI9341_H_
 
 #if ARDUINO >= 100
 #include "Arduino.h"
@@ -19,13 +19,13 @@
 
 //#define USE_ADAFRUIT_SHIELD_PINOUT 1
 
-class Adafruit_TFTLCD : public Adafruit_GFX {
+class TFTLCD_ILI9341 : public Adafruit_GFX {
 
 public:
-  Adafruit_TFTLCD(uint8_t cs, uint8_t cd, uint8_t wr, uint8_t rd, uint8_t rst);
-  Adafruit_TFTLCD(void);
+  TFTLCD_ILI9341(uint8_t cs, uint8_t cd, uint8_t wr, uint8_t rd, uint8_t rst);
+  TFTLCD_ILI9341(void);
 
-  void begin(uint16_t id = 0x9325);
+  void begin();
   void drawPixel(int16_t x, int16_t y, uint16_t color);
   void drawFastHLine(int16_t x0, int16_t y0, int16_t w, uint16_t color);
   void drawFastVLine(int16_t x0, int16_t y0, int16_t h, uint16_t color);
